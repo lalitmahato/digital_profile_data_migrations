@@ -54,6 +54,13 @@ def click_btn_xpath(value):
     btn = driver.find_element(By.XPATH, value)
     btn.click()
 
+def select_by_xpath(xpath, value):
+    select = Select(driver.find_element(By.XPATH, xpath))
+    select.click()
+    radio_btn = driver.find_element(By.NAME, value)
+
+
+
 form_url = 'http://ee.kobo.local/x/2eyzRNLp'
 
 get_url(form_url)
